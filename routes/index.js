@@ -46,6 +46,7 @@ module.exports = function (app) {
     fs.lstat(path, function (err, stats) {
       if (stats && stats.isFile()) {
         next();
+
       } else {
         listFile(app.get("views"), path, req, res);
 
