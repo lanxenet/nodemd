@@ -48,7 +48,7 @@ module.exports = function (app) {
         next();
 
       } else {
-        listFile(app.get("views"), path, req, res);
+        listFile(app.get("views"), pathname, req, res);
 
       }
     });
