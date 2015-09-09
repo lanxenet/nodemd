@@ -3,6 +3,7 @@ var join = require('path').join;
 var url = require("url");
 var markdown = require("./markdown");
 var download = require("./download");
+var html = require("./html");
 
 //增加HTML的页头
 var header = '<!DOCTYPE html>' +
@@ -55,5 +56,6 @@ module.exports = function (app) {
   });
 
   markdown(app);
+  html(app);
   download(app);
 };
